@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  teste
+  <input id="qualquer"/>
+  <button id="button-mostra"> mostrar </button>
+  
+</body>
+  <script>
+    var meuInput = document.getElementById("qualquer");
+    var meuButton = document.getElementById("button-mostra");
+
+    console.error("Esse é um erro");
+
+    meuButton.addEventListener("click", () => console.log( meuInput.value ))
+  </script>
+</html>
