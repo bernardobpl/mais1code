@@ -5,7 +5,7 @@
 // divisao 1/1
 // executem a função e mostra num console.log o resultado da operação
 
-const numero1 = 6;
+const numero1 = 9;
 const numero2 = 3;
 
 function soma(num1, num2){
