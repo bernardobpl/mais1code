@@ -9,3 +9,15 @@
 // x2 = 2
 
 // dar um console.log no x1 e no x2 que for cvalculado pela função de vcs
+
+function SegundoGrau(a,b,c){
+  const delta = Math.pow(b,2) - 4*a*c;
+
+  const x1 = (-b + Math.sqrt(delta))/(2*a);
+  const x2 = (-b - Math.sqrt(delta))/(2*a);
+
+  console.log(x1);
+  console.log(x2);
+}
+
+SegundoGrau(1,-5,6);
