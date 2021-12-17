@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita</title>
+  </head>
+
+  <body>
+    <div>
+      <h2> Strogonoff </h2>
+      <label> Ingrediente </label>
+      <input id="input-ingrediente" type="text" />
+      <button id="btn-adicionar" onclick="AdicionaIngrediente()"> Adicionar </button>
+
+      <ul id="ul-ingredientes">
+      </ul>
+
+      <h3> Modo de Preparo </h3>
+      <ol>
+        <li>Temperar o frango</li>
+        <li>Fritar o frango</li>
+        <li>Colocar massa de tomate e creme de leite</li>
+        <li>Servir com arroz e batata palha a gosto</li>
+      </ol>
+    </div>
+
+    <script>
+      const inputIngredientes = document.getElementById("input-ingrediente");
+      const buttonAdicionar = document.getElementById("btn-adicionar");
+      const ulIngredientes = document.getElementById("ul-ingredientes");
+
+      function AdicionaIngrediente(){
+        const inputValue = inputIngredientes.value;
+        //innerHTML => inner significa "dentro" 
+        const newLi = document.createElement("li");
+        newLi.innerHTML = inputValue;
+
+        ulIngredientes.appendChild(newLi);
+
+        inputIngredientes.value = "";
+        inputIngredientes.focus();
+      }
+
+      // document.addEventListener('keydown', event => {
+      //   if (event.key === "Enter"){
+      //     AdicionaIngrediente();
+      //   }
+      // });
+
+    </script>
+  </body>
+</html>

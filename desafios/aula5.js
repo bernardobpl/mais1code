@@ -10,7 +10,9 @@
 // para fazer uma condição "se isso, então faz isso", usamos o comando "if"
 
 // comparadores de valores
-// x == y , se X for igual a Y
+// x == y , se X for igual a Y independente do tipo de variável. Exemplo: 1 == "1" (verdadeiro)
+// x === y , se X for igual a Y e o tipo da variável também for igual. Exemplo: 1 === "1" (falso)
+// x !== y , se X for diferente de Y 
 // x > y , se X for maior que Y
 // x < y , se X for menor que Y
 // x >= Y , se X for maior ou igual a Y
@@ -95,7 +97,6 @@ let contador = 0;
 
 // const resultado = soma(1,2);
 
-
 // const Soma2 = (a,b) => {
 //   return a+b;
 // }
@@ -105,6 +106,11 @@ let contador = 0;
 
 const pessoas = [ pessoa0, pessoa1, pessoa2, pessoa3, pessoa4 ];
 
+// for(var pessoa of pessoas){
+//   if( pessoa.idade >= 18 ){
+//     console.log(pessoa.nome)
+//   }
+// }
 
 pessoas.map( (pessoa) => {
   if( pessoa.idade >= 18 ){

@@ -8,18 +8,21 @@
 const numero1 = 9;
 const numero2 = 3;
 
+// const soma = (num1, num2) => num1+num2;
+// const subtracao = (num1, num2) => num1-num2;
+// const multiplicacao = (num1, num2) => num1*num2;
+// const divisao = (num1, num2) => num1/num2;
+///////////////////
+
 function soma(num1, num2){
   return num1+num2;
 }
-
 function subtracao(num1, num2){
   return num1-num2;
 }
-
 function multiplicacao(num1, num2){
   return num1*num2;
 }
-
 function divisao(num1, num2){
   return num1/num2;
 }

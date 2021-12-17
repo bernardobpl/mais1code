@@ -7,14 +7,14 @@ const lista = [ "gabriel", "clara", "mauricio", "jean", "bernardo", "maria" ]
 // 4 bernardo
 // 5 maria
 
-// console.log( lista[4] )
+console.log( lista[4] )
 ///////////////////////////////////////////////
 const pessoa0 = {
   idade: 16,
   nome: "Cleiton",
 }
 
-// console.log(pessoa0.nome)
+console.log(pessoa0.nome)
 
 //////////////////////////////////
 
