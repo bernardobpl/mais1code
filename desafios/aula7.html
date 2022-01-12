@@ -1,0 +1,87 @@
+<!-- 
+pega o html com a receita que vcs escreveram na aula2 na pasta de html
+remover os items da lista
+pegar os elementos e armazenar nas variáveis ( precisa colocar um id nos elementos para conseguir pegar )
+cria uma função para executar quando clicar em adicionar
+a função deve pegar o q foi escrito no input, e colocar em um novo item da lista
+esse novo item da lista deve ser colocado dentro da lista
+colocar a função para ser executada quando o botão for clicado (onclick)
+
+fazer isso para a lista de ingredientes
+e também para a lista do passo a passo de como preparar a receita 
+-->
+<!DOCTYPE html> 
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita</title>
+  </head>
+
+  <body>
+    <div>
+      <h2> Strogonoff </h2>
+      <label> Ingrediente </label>
+      <input id="input-ingrediente" type="text" />
+      <button id="btn-adicionar-ingrediente" onclick="AddIngrediente()"> Adicionar </button>
+      <h3> Ingredientes </h3>
+      <ul id="ul-ingredientes">
+      </ul>
+
+      <div style="height: 10px; width: 100%; background: red;"></div>
+      <br>
+
+      <label> Passo </label>
+      <input id="input-passo" type="text" />
+      <button id="btn-adicionar-passo" onclick="AddPasso()"> Adicionar </button>
+      <h3> Modo de Preparo </h3>
+      <ol id="ol-passos">
+        <!-- <li>Temperar o frango</li>
+        <li>Fritar o frango</li>
+        <li>Colocar massa de tomate e creme de leite</li>
+        <li>Servir com arroz e batata palha a gosto</li> -->
+      </ol>
+    </div>
+
+    <script>
+      const inputIngrediente = document.getElementById("input-ingrediente")
+      const btnAddIngrediente = document.getElementById("btn-adicionar-ingrediente")
+      const listaIngrediente = document.getElementById("ul-ingredientes")
+      const inputPasso = document.getElementById("input-passo")
+      const btnAddPasso = document.getElementById("btn-adicionar-passo")
+      const listaPassos = document.getElementById("ol-passos")
+
+      //arrow function (=>) 
+      const AddIngrediente = () => {
+        const ingrediente = inputIngrediente.value
+        const novoItem = document.createElement('li');
+        novoItem.innerHTML = ingrediente
+        listaIngrediente.appendChild(novoItem)
+
+        inputIngrediente.value = ''
+      }
+
+      const AddPasso = () => {
+        const passo = inputPasso.value
+        const novoItem = document.createElement('li');
+        novoItem.innerHTML = passo
+        listaPassos.appendChild(novoItem)
+
+        inputPasso.value = ''
+      }
+
+      document.addEventListener('keydown', event => {
+        if(event.key === 'Enter'){
+          if(document.activeElement === inputIngrediente){
+            AddIngrediente()
+          }
+          if(document.activeElement === inputPasso){
+            AddPasso()
+          }
+        }
+      })
+
+    </script>
+  </body>
+</html>
