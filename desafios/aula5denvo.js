@@ -56,13 +56,8 @@ const pessoas = [
   pessoa4
 ]
 
-const podeIrAoShow = (pessoa) => {
+pessoas.forEach((pessoa)=>{
   if(pessoa.idade >= 18){
-    return true
-  } 
-  return false
-}
-
-if(podeIrAoShow(pessoa0)){
-  console.log(pessoa0.nome, 'pode ir ao show')
-}
+    console.log(pessoa.nome, 'pode ir ao show')
+  }
+})
