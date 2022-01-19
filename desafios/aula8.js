@@ -23,7 +23,7 @@ const resultado = {
 
 //fazer o resultado.tempoTotal ter o tempo total de se arrumar pro role
 //não pode somar os tempos usando os números diretamente
-
+resultado.tempoTotal = objeto1.tempoDoBanho + objeto2.tempoPraRoupa + objeto3.tempoDeEscovar + objeto3.tempoDePentearOCabelo
 
 //não pode alterar o console.log
 console.log(resultado.tempoTotal)
