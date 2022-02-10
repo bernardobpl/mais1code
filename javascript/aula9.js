@@ -284,12 +284,16 @@ console.log()
 console.log('Método Splice')
 
 // divide a lista em duas 
-// recebe dois números, o primeiro número indica o index de onde deve começar a separar, o segundo indica quanto items a partir daquele index devem ser separados
+// recebe dois números, o primeiro número indica o index de onde deve começar a separar, o segundo indica quantos items a partir daquele index devem ser separados
 // retorna uma lista com os itens separados
-// alista original é modificada e os itens separads são removidos dela
+// alista original é modificada e os itens 0s1e2p3a4 r ados são removidos dela
 
 const listaAlunosComplexa6 = JSON.parse(JSON.stringify(listaAlunosComplexa))
+
+// [s,e,p,a,r,a,d,o,s]
+// [r] = [s,e,p,a,a,d,o,s]
 const resultado24 = listaAlunosComplexa6.splice(1,2)
+
 console.log("resultado24: ", resultado24)
 console.log("listaAlunosComplexa resultado24: ", listaAlunosComplexa6)
 
