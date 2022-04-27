@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+var express_1 = require("express");
+var controller_1 = require("./modules/donation/controller");
+var controller_2 = require("./modules/product/controller");
+var controller_3 = require("./modules/solicitation/controller");
+var controller_4 = require("./modules/user/controller");
+exports.router = (0, express_1.Router)();
+exports.router.use("/users", controller_4.userController);
+exports.router.use("/donations", controller_1.donationController);
+exports.router.use("/products", controller_2.productController);
+exports.router.use("/solicitations", controller_3.solicitationController);

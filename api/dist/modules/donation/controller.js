@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.donationController = void 0;
+var express_1 = require("express");
+var service_1 = require("./service");
+exports.donationController = (0, express_1.Router)();
+exports.donationController.get('/', service_1.donationService.getDonationsFromUser);
+exports.donationController.post('/create', service_1.donationService.createDonation);
+exports.donationController.put('/edit/:id', service_1.donationService.editDonation);
+exports.donationController.delete('/delete/:id', service_1.donationService.deleteDonation);
