@@ -1,10 +1,13 @@
-import { useState, useEffect } from 'react'
-import { CreateUser } from './components/CreateUser'
+import { Router } from './router'
 
 const App = () => {
   return (
     <div>
-      <CreateUser />
+      <Router />
+      {/* <CreateUser /> */}
+      {/* <CreateDonation /> */}
+      {/* <ShowDonations /> */}
+      {/* <ShowUser /> */}
     </div>
   )
 }

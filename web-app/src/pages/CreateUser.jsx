@@ -21,6 +21,7 @@ export const CreateUser = () => {
 
   return (
     <div>
+      <h1>Criar Usuário</h1>
       <form onSubmit={handleSubmit}>
         <label> Nome </label>
         <input value={name} onChange={(e)=>setName(e.target.value)}/>
